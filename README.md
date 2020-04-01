@@ -1,9 +1,22 @@
+## Description
+
+Docker benchmark of writes to volumes in "delegated" or "cached" modes.
+see:
+- https://forums.docker.com/t/file-access-in-mounted-volumes-extremely-slow-cpu-bound/8076/264
+- https://docs.docker.com/docker-for-mac/osxfs-caching/
+- https://github.com/docker-library/postgres/issues/299
+
+
 ## Installation
 
-Build/run this container:
+- Download package:
+```sh
+git@github.com:sashsvamir/docker-testspeed.git && cd docker-testspeed
+```
+
+- Build this container:
 ```sh
 docker-compose create
-docker-compose up -d
 ```
 
 
