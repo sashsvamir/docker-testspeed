@@ -1,0 +1,18 @@
+#
+# See README.md
+#
+web:
+  image: phusion/baseimage:0.9.19
+  #ports:
+  #  - "8080:80"
+  # command: rm -rf /etc/apache2/mods-available/ssl.conf /etc/apache2/apache2.conf
+  volumes:
+    # sites local storage:
+    - ./src/www:/var/www:delegated
+  environment:
+    - LANG=en_US.UTF-8
+    - LANGUAGE=en_US:en
+    - LC_ALL=en_US.UTF-8
+  #links:
+   # - db
+    #- elastic
