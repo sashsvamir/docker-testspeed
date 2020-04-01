@@ -9,45 +9,33 @@ docker-compose up -d
 
 ## Running test
 
-Enter to container:
+Just run and see results:
 ```sh
-docker ps -a
-docker exec -it [container_id] /bin/bash
+docker-compose up
+docker-compose down
 ```
 
-Test speed:
-```sh
-cd /var/www
-time dd if=/dev/zero of=test.dat bs=1024 count=50000
-rm -rf test.dat
-cd /tmp
-time dd if=/dev/zero of=test.dat bs=1024 count=50000
-rm -rf test.dat
-```
-
-Remove container
-```sh
-docker rm [container_id] -f
-docker rmi phusion/baseimage:0.9.19
-```
 
 
 ## Additional information
 
 ### Results on mac
 
-Speed of write to volume:
+Speed of write 10 MB to docker write to:
+- layer:
 `
-real	0m40.111s
-user	0m0.400s
-sys	0m4.430s
+....70.3 MB/s
+real	0m0.148s
+user	0m0.013s
+sys	0m0.116s
 `
 
-Speed of write to docker write layer:
+- volume:
 `
-real	0m0.520s
-user	0m0.050s
-sys	0m0.460s
+....2.0 MB/s
+real	0m5.225s
+user	0m0.026s
+sys	0m0.443s
 `
 
 

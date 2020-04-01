@@ -1,18 +1,30 @@
+# the test of "delegated" or "cached" volume modes:
+
+version: '2'
+services:
+  web:
+    image: phusion/baseimage:0.9.19
+    volumes:
+      - ./src/www:/var/www
+    command: /bin/bash -c "time dd if=/dev/zero of=/tmp/test.dat bs=1024 count=10000 && time dd if=/dev/zero of=/var/www/test.dat bs=1024 count=10000 && rm -rf /var/www/test.dat"
+    environment:
+      - LANG=en_US.UTF-8
+      - LANGUAGE=en_US:en
+      - LC_ALL=en_US.UTF-8
+
+
 #
 # See README.md
 #
-web:
-  image: phusion/baseimage:0.9.19
+# web:
+  # image: phusion/baseimage:0.9.19
   #ports:
   #  - "8080:80"
   # command: rm -rf /etc/apache2/mods-available/ssl.conf /etc/apache2/apache2.conf
-  volumes:
+  # volumes:
     # sites local storage:
-    - ./src/www:/var/www:delegated
-  environment:
-    - LANG=en_US.UTF-8
-    - LANGUAGE=en_US:en
-    - LC_ALL=en_US.UTF-8
+    # - ./src/www:/var/www:delegated
+
   #links:
    # - db
     #- elastic
