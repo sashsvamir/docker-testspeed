@@ -2,10 +2,10 @@
 
 Docker benchmark of writes to volumes in "delegated" or "cached" modes.
 see:
+- https://docs.docker.com/docker-for-mac/osxfs/#performance-issues-solutions-and-roadmap
 - https://forums.docker.com/t/file-access-in-mounted-volumes-extremely-slow-cpu-bound/8076/264
 - https://docs.docker.com/docker-for-mac/osxfs-caching/
 - https://github.com/docker-library/postgres/issues/299
-
 
 
 ## Installation
