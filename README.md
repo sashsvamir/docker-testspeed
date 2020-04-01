@@ -7,17 +7,15 @@ see:
 - https://github.com/docker-library/postgres/issues/299
 
 
+
 ## Installation
 
 - Download package:
 ```sh
-git@github.com:sashsvamir/docker-testspeed.git && cd docker-testspeed
+git clone git@github.com:sashsvamir/docker-testspeed.git
+cd docker-testspeed
 ```
 
-- Build this container:
-```sh
-docker-compose create
-```
 
 
 ## Running test
@@ -31,6 +29,7 @@ docker-compose down
 
 
 ## Additional information
+
 
 ### Results on mac
 
