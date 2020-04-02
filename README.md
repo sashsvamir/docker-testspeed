@@ -1,7 +1,8 @@
 ## Description
 
 Docker benchmark of writes to volumes in "delegated" or "cached" modes.
-see:
+
+See issues:
 - https://docs.docker.com/docker-for-mac/osxfs/#performance-issues-solutions-and-roadmap
 - https://github.com/docker/for-mac/issues/1592
 - https://www.docker.com/blog/user-guided-caching-in-docker-for-mac/
