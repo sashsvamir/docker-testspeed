@@ -34,7 +34,7 @@ docker-compose down
 ## Additional information
 
 
-### Results on mac
+#### Results on mac
 
 Default speed of write 10 MB to docker write to:
 - layer:
@@ -53,6 +53,8 @@ user	0m0.026s
 sys	0m0.443s
 ```
 
-
-
+#### To see states of osxfs:
+```
+/Applications/Docker.app/Contents/MacOS/com.docker.osxfs state
+```
 
